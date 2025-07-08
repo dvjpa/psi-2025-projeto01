@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Equipe/Elenco{% endblock %}
+
+{% block content %}
+    <h1>Elenco Principal</h1>
+    <ul>
+        {% for jogador in jogadores %}
+        <li>
+            <img src="{% static jogador.foto %}" alt="{{ jogador.nome }}" width="100">
+            <strong>{{ jogador.nome }}</strong><br>
+            Idade: {{ jogador.idade }}<br>
+            Posição: {{ jogador.posicao }}<br>
+            Nascido em: {{ jogador.nascimento }}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Início{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ titulo }}</h1>
+        <p>{{ descricao }}</p>
+        <p>{{ historia }}</p>
+        <img src="{% static 'img/seahawks.jpg' %}" alt="Estádio dos Seahawks" width="600">
+    </div>
+{% endblock %}
