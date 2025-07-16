@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seattle Seahawks - Elenco</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/seahawks/roster/">Elenco</a>
+            <a href="/contato/">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Elenco do Seattle Seahawks</h1>
+
+        {% for jogador in jogadores %}
+            <div style="background-color: #003366; padding: 15px; margin: 20px 0; border-radius: 8px;">
+                {% if jogador.foto %}
+                    <img src="{{ jogador.foto.url }}" alt="{{ jogador.nome }}" style="width:150px; height:auto;">
+                {% else %}
+                    <img src="https://via.placeholder.com/150x150?text=Jogador" alt="Sem foto">
+                {% endif %}
+                <h2>#{{ jogador.numero }} {{ jogador.nome }}</h2>
+                <p><strong>Posição:</strong> {{ jogador.posicao }}</p>
+                <p><strong>Altura:</strong> {{ jogador.altura }}</p>
+                <p><strong>Peso:</strong> {{ jogador.peso }} lbs</p>
+                <p><strong>Universidade:</strong> {{ jogador.universidade }}</p>
+            </div>
+        {% empty %}
+            <p>Nenhum jogador cadastrado ainda.</p>
+        {% endfor %}
+    </div>
+
+    <footer>
+        &copy; 2025 Seattle Seahawks Fan Page
+    </footer>
+</body>
+</html>
