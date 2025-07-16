@@ -29,17 +29,17 @@ footer {
 }
 
 .container {
-    max-width: 700px;      /* limita largura pra ficar agradável */
-    margin: 40px auto;     /* centraliza horizontal e da espaço vertical */
-    text-align: center;    /* centraliza texto e imagens */
+    max-width: 700px;     
+    margin: 40px auto;     
+    text-align: center;
     font-family: Arial, sans-serif;
     color: #ffffff;
 }
 
 .container img {
     margin-top: 20px;
-    max-width: 100%;       /* a imagem não ultrapassa o container */
-    height: auto;          /* mantém proporção da imagem */
-    border-radius: 8px;    /* cantos arredondados, fica bonito */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra suave */
+    max-width: 100%;       
+    height: auto;         
+    border-radius: 8px;   
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
