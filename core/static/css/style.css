@@ -81,7 +81,7 @@ footer {
 .titulo-noticias {
     font-size: 2.5em;
     text-align: center;
-    color: #002244; /* Azul escuro dos Seahawks */
+    color: #002244;
     margin-bottom: 30px;
 }
 
@@ -93,7 +93,7 @@ footer {
 
 .noticia-card {
     background-color: #f2f2f2;
-    border-left: 8px solid #69be28; /* Verde dos Seahawks */
+    border-left: 8px solid #69be28;
     padding: 20px;
     border-radius: 8px;
     transition: transform 0.2s, box-shadow 0.2s;
