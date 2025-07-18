@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}{{ noticia.titulo }}{% endblock %}
+
+{% block content %}
+<article class="noticia-detalhe">
+    <h1>{{ noticia.titulo }}</h1>
+    <p class="data-noticia">{{ noticia.data }}</p>
+    <p>{{ noticia.conteudo }}</p>
+    <a href="{% url 'noticias' %}">← Voltar para todas as notícias</a>
+</article>
+{% endblock %}

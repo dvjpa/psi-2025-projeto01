@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Notícias{% endblock %}
+
+{% block content %}
+<section class="noticias-container">
+    <h1 class="titulo-noticias">📰 Últimas Notícias</h1>
+    
+    <div class="noticia-grid">
+        {% for noticia in noticias %}
+            <div class="noticia-card">
+                <img src="{% static noticia.imagem %}" alt="{{ noticia.titulo }}" class="noticia-img">
+                <div class="noticia-conteudo">
+                    <p class="data-noticia">{{ noticia.data }}</p>
+                    <h2 class="titulo-noticia">{{ noticia.titulo }}</h2>
+                    <p class="resumo-noticia">{{ noticia.resumo }}</p>
+                    <a href="{% url 'detalhe_noticia' noticia.id %}" class="btn-leia-mais">Leia mais</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
