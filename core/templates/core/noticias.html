@@ -10,12 +10,11 @@
     <div class="noticia-grid">
         {% for noticia in noticias %}
             <div class="noticia-card">
-                <img src="{% static noticia.imagem %}" alt="{{ noticia.titulo }}" class="noticia-img">
+               <img src="{{ noticia.imagem.url }}" alt="{{ noticia.titulo }}">
                 <div class="noticia-conteudo">
                     <p class="data-noticia">{{ noticia.data }}</p>
                     <h2 class="titulo-noticia">{{ noticia.titulo }}</h2>
                     <p class="resumo-noticia">{{ noticia.resumo }}</p>
-                    <a href="{% url 'detalhe_noticia' noticia.id %}" class="btn-leia-mais">Leia mais</a>
                 </div>
             </div>
         {% endfor %}

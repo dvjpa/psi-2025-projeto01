@@ -10,7 +10,7 @@
     <div class="lista-jogadores">
         {% for jogador in jogadores %}
             <div class="jogador-card">
-                <img src="{% static jogador.foto %}" alt="{{ jogador.nome }}" width="150" height="150">
+                <img src="{{ jogador.foto.url }}" alt="{{ jogador.nome }}"" width="150" height="150">
                 <h2>#{{ jogador.numero }} {{ jogador.nome }}</h2>
                 <p><strong>Posição:</strong> {{ jogador.posicao }}</p>
                 <p><strong>Idade:</strong> {{ jogador.idade }} anos</p>
